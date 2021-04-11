@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/solTextFragment"
+        android:name="com.gayedirican.odev5.SolTextFragment"
+        android:label="fragment_sol_text"
+        tools:layout="@layout/fragment_sol_text" >
+        <action
+            android:id="@+id/toplamEkraniGecis"
+            app:destination="@id/toplamSonucFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sagTextFragment"
+        android:name="com.gayedirican.odev5.SagTextFragment"
+        android:label="fragment_sag_text"
+        tools:layout="@layout/fragment_sag_text" >
+        <action
+            android:id="@+id/carpimEkraniGecis"
+            app:destination="@id/carpimSonucFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.gayedirican.odev5.AnasayfaFragment"
+        android:label="AnasayfaFragment"
+        tools:layout="@layout/fragment_anasayfa"/>
+    <fragment
+        android:id="@+id/toplamSonucFragment"
+        android:name="com.gayedirican.odev5.ToplamSonucFragment"
+        android:label="fragment_toplam_sonuc"
+        tools:layout="@layout/fragment_toplam_sonuc" >
+        <argument
+            android:name="ad"
+            app:argType="string"
+            android:defaultValue="isim yok" />
+    </fragment>
+    <fragment
+        android:id="@+id/carpimSonucFragment"
+        android:name="com.gayedirican.odev5.CarpimSonucFragment"
+        android:label="fragment_carpim_sonuc"
+        tools:layout="@layout/fragment_carpim_sonuc" >
+        <argument
+            android:name="ad"
+            app:argType="string" />
+    </fragment>
+</navigation>
